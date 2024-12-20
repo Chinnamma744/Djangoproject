@@ -1,0 +1,17 @@
+
+{%extends 'basic.html'%}
+{%block 'body' %}
+   
+
+   
+    {% for student in students %}
+<li style="color: {%cycle 'red' 'green' 'yellow' %};">
+    {{student.name}} - {{student.name | length | add:"2"}} 
+</li>
+{%endfilter%}
+{% endfor %}
+{% endblock %}
+
+    
+</body>
+</html>
